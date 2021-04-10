@@ -1,0 +1,143 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes upload page</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" />
+    
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm fixed-top" style="background-color:lavender;">
+        <div class="container my-2">
+            <a href="/dsustudentportal.html" class="navbar-brand text-dark font-weight-bold" style="font-size: medium;">DSU-CSE Student Resources Portal</a>
+            <button
+                class="navbar-toggler"
+                data-toggle="collapse"
+                data-target="#collapseNav"
+            >
+            <span class="fas text-dark fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-grow-0" id="collapseNav">
+                <div class="navbar-nav">
+                    <button class="btn btn-outline-dark ml-auto mx-3">
+                        Contact Us
+                    </button>
+                    <a href="/calendarpage.html" class="nav-item nav-link text-dark font-weight-bold my-auto">
+                        Calendar
+                    </a>
+                    <a href="/notespage.html" class="nav-item nav-link text-dark font-weight-bold my-auto">
+                        Notes
+                    </a>
+                    <a href="/announcementspage.html" class="nav-item nav-link text-dark font-weight-bold my-auto">
+                        Announcements
+                    </a>
+                    <a href="#" class="nav-item nav-link text-dark font-weight-bold my-auto">
+                        Events
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 pt-5">
+        <h1 class="font-weight-light text-info">
+            Uploading new notes
+        </h1>
+    </div>
+    
+    <!-- Form -->
+    <div class="container my-5 pt-0">
+        <div class="row">
+            <div class="col-12 col-md-8">
+                <form action="/senddata.php" method="POST">
+                    <div class="form-group">
+                        <label for="src">Thumbnail image link: </label>
+                        <input type="text" class="form-control" id="src" name="src" required placeholder="Add a link to desired image">
+                    </div>
+                    <div class="form-group">
+                        <label for="alt">Image description: </label>
+                        <input type="text" class="form-control" id="alt" name="alt" required placeholder="Add an alt description for the image">
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Title: </label>
+                        <input type="text" class="form-control" id="title" name="title" required placeholder="Title of the uploaded material">
+                    </div>
+                    <div class="form-group">
+                        <label for="text">Description: </label>
+                        <input type="textarea" class="form-control" id="text" name="text" required placeholder="Description of the uploaded material"> 
+                    </div>
+                    <div class="form-group">
+                        <label for="href">Link to file: </label>
+                        <input type="text" class="form-control" id="href" name="href" required placeholder="Link to file">
+                    </div>
+                    <div class="form-group">
+                        <label for="pw">Password: </label>
+                        <input type="password" class="form-control" id="pw" name="pw" required placeholder="Admin password">
+                    </div>
+                    <button type="submit" name="submit" class="btn btn-outline-dark btn-success">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <footer>
+        <div class="container-fluid text-center" style="background-color: black;">
+            <div class="row py-5">
+                <div class="col-12">
+                    <h2 class="text-light">Liked our website??</h2>
+                    <button class="btn btn-outline-light btn-lg">Leave a review!</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-4 pb-4">
+                    <h5 class="text-info">More Links</h5>
+                    <a href="https://www.dsu.edu.in" class="text-light d-block">DSU Official Website</a>
+                    <a href="https://www.youtube.com/channel/UCOulRShzEW0qSxHyHri96aQ" class="text-light d-block">DSU YouTube Channel</a>
+                    <a href="https://instagram.com/dayanandasagaruniversityblr?igshid=19hutejo2lvkg" class="text-light d-block">DSU Instagram Page</a>
+                </div>
+                <div class="col-12 col-md-4 text-light text-justify">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </p>
+                </div>
+                <div class="col-12 col-md-4 pb-4">
+                     <h5 class="text-info">Social</h5>
+                     <a href="a">
+                         <i class="fab fa-linkedin text-light h1 d-block"></i>
+                     </a>
+                     <a href="a">
+                        <i class="fab fa-github text-light h1 d-block"></i>
+                    </a>
+                    <a href="a">
+                        <i class="fas fa-envelope text-light h1 d-block"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="row pt-2">
+                <div class="col-12 text-muted mb-2">
+                    Akash Bagchi ENG19CS0019 | Akshaya Nadathur ENG19CS0024
+                </div>
+            </div>
+        </div>
+    </footer>
+</html>
