@@ -13,6 +13,9 @@
     $title = $_POST['title'];
     $text = $_POST['text'];
     $name = $_POST['name'];
+    $title = addslashes($title);
+    $text = addslashes($text);
+    $name = addslashes($name);
 
     $sqlquery = "INSERT INTO `reviewdetails` (`title`, `text`, `name`) VALUES ('$title', '$text', '$name')" ;
     if($conn->query($sqlquery) == TRUE){
