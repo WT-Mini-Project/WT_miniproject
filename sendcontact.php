@@ -13,6 +13,9 @@
     $name = $_POST['name'];
     $email = $_POST['email'];
     $text = $_POST['text'];
+    $name = addslashes($name);
+    $email = addslashes($email);
+    $text = addslashes($text);
 
     $sqlquery = "INSERT INTO `contactdetails` (`name`, `email`, `text`) VALUES ('$name', '$email', '$text')" ;
     if($conn->query($sqlquery) == TRUE){
