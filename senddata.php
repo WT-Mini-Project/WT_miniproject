@@ -19,6 +19,11 @@
         $title = $_POST['title'];
         $text = $_POST['text'];
         $href = $_POST['href'];
+        $src = addslashes($src);
+        $alt = addslashes($alt);
+        $title = addslashes($title);
+        $text = addslashes($text);
+        $href = addslashes($href);
 
         $sqlquery = "INSERT INTO `newnotesdetails` (`src`, `alt`, `title`, `text`, `href`) VALUES ('$src', '$alt', '$title', '$text', '$href')" ;
         if($conn->query($sqlquery) == TRUE){
