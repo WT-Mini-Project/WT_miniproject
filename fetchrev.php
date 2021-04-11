@@ -2,7 +2,7 @@
     function filldiv(){
         $loopResult = "";
         $conn = new mysqli("localhost", "root", "", "reviews");
-        $sql = "SELECT * FROM reviewdetails";
+        $sql = "SELECT * FROM reviewdetails ORDER BY ind DESC";
         $result = $conn->query($sql);
         while($row = $result->fetch_assoc()){
             $loopResult .= '
@@ -10,12 +10,12 @@
                     <div class="card shadow h-100">
                         <div class="card-body">
                             <h4 class="card-title">
-                                '.$row['title'].'
+                                '.stripslashes($row['title']).'
                             </h4>
-                            <p class="card-text mb-0">'.$row['text'].'</p>
+                            <p class="card-text mb-0">'.stripslashes($row['text']).'</p>
                         </div>
                         <div class="card-footer">
-                            <p class="card-text">'.$row['name'].'</p>
+                            <p class="card-text">'.stripslashes($row['name']).'</p>
                         </div>
                     </div>
                 </div> 
