@@ -17,6 +17,9 @@
         $title = $_POST['title'];
         $text = $_POST['text'];
         $sources = $_POST['sources'];
+        $title = addslashes($title);
+        $text = addslashes($text);
+        $sources = addslashes($sources);
 
         $sqlquery = "INSERT INTO `newann` (`title`, `text`, `sources`) VALUES ('$title', '$text', '$sources')" ;
         if($conn->query($sqlquery) == TRUE){
