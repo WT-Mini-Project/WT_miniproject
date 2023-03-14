@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Announce a new event</title>
+    <title>Calendar</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -19,20 +19,18 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" />
-    
 </head>
-
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-sm fixed-top" style="background-color:lavender;">
         <div class="container my-2">
-            <a href="../index.html" class="navbar-brand text-dark font-weight-bold" style="font-size: medium;">DSU-CSE Student Resources Portal</a>
+            <a href="/index.html" class="navbar-brand text-dark font-weight-bold" style="font-size: medium;">DSU-CSE Student Resources Portal</a>
             <button
                 class="navbar-toggler"
                 data-toggle="collapse"
                 data-target="#collapseNav"
             >
-            <span class="fas text-dark fa-bars"></span>
+                <span class="fas text-dark fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse flex-grow-0" id="collapseNav">
                 <div class="navbar-nav">
@@ -56,47 +54,11 @@
         </div>
     </nav>
 
-    <div class="container mt-5 pt-5">
-        <h1 class="font-weight-light text-info">
-            Announcing new Event
-        </h1>
-    </div>
-    
-    <!-- Form -->
-    <div class="container my-5 pt-0">
-        <div class="row">
-            <div class="col-12 col-md-8">
-                <form action="../php/sendevent.php" method="POST">
-                    <div class="form-group">
-                        <label for="src">Thumbnail image link: </label>
-                        <input type="text" class="form-control" id="src" name="src" required placeholder="Link to associated image">
-                    </div>
-                    <div class="form-group">
-                        <label for="alt">Image description: </label>
-                        <input type="text" class="form-control" id="alt" name="alt" required placeholder="Add an alt description for the image">
-                    </div>
-                    <div class="form-group">
-                        <label for="title">Title: </label>
-                        <input type="text" class="form-control" id="title" name="title" required placeholder="Event title">
-                    </div>
-                    <div class="form-group">
-                        <label for="text">Description: </label>
-                        <textarea class="form-control" id="text" name="text" rows=3 required placeholder="Description of the uploaded material"></textarea> 
-                    </div>
-                    <div class="form-group">
-                        <label for="href">Link to event: </label>
-                        <input type="text" class="form-control" id="href" name="href" placeholder="Link to event page, where applicable">
-                    </div>
-                    <div class="form-group">
-                        <label for="pw">Password: </label>
-                        <input type="password" class="form-control" id="pw" name="pw" required placeholder="Admin password">
-                    </div>
-                    <button type="submit" name="submit" class="btn btn-outline-dark btn-success">
-                        Submit
-                    </button>
-                </form>
-            </div>
-        </div>
+    <!-- Calendar embed-->
+    <div class="text-center text-info my-5 py-5">
+        <h1 class="font-weight-light">Calendar</h1>
+        <br>
+        <iframe src="/dsucalendar.pdf" width="100%" height="100%" frameborder="0"></iframe>
     </div>
 
     <!-- Footer section -->
@@ -117,7 +79,8 @@
                 </div>
                 <div class="col-12 col-md-4 text-light text-justify">
                     <p>
-                        This website was developed by Akash Bagchi and Akshaya Nadathur of Dayananda Sagar University - Kudlu Gate, Bangalore as part of the 4th Semester Web Technologies' Mini Project. The main goal of the website was to create a student portal for CSE students wherein there would be easy access to college material, calendars, announcements etc. thereby removing ambiguity and streamlining the lives of thousands of students. This website uses HTML, CSS, JavaScript and JQuery, Bootstrap4, PHP and MySQL to achieve its functionality. We hope the site served your needs!                    </p>
+                        This website was developed by Akash Bagchi and Akshaya Nadathur of Dayananda Sagar University - Kudlu Gate, Bangalore as part of the 4th Semester Web Technologies' Mini Project. The main goal of the website was to create a student portal for CSE students wherein there would be easy access to college material, calendars, announcements etc. thereby removing ambiguity and streamlining the lives of thousands of students. This website uses HTML, CSS, JavaScript and JQuery, Bootstrap4, PHP and MySQL to achieve its functionality. We hope the site served your needs!
+                    </p>
                 </div>
                 <div class="col-12 col-md-4 pb-4">
                      <h5 class="text-info">Social</h5>
@@ -139,4 +102,5 @@
             </div>
         </div>
     </footer>
+</body>
 </html>

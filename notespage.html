@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Announcements</title>
+    <title>Notes</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -22,31 +22,32 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <script type="text/javascript">
-       
-       $(document).ready(function()
-        {
-            setInterval(function()
-            {
-                $("#rowdisplay").load("../php/fetchann.php");
-                refresh();
-            },1000)
-        })
+    <?php include('fetchdata.php')?>
 
-        
+    <script type="text/javascript">
+            $(document).ready(function()
+            {
+                setInterval(function()
+                {
+                    $("#notesblock").load("fetchdata.php");
+                    refresh();
+                },1000)
+            })
+
+            
     </script>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-sm fixed-top" style="background-color:lavender;">
         <div class="container my-2">
-            <a href="../index.html" class="navbar-brand text-dark font-weight-bold" style="font-size: medium;">DSU-CSE Student Resources Portal</a>
+            <a href="/index.html" class="navbar-brand text-dark font-weight-bold" style="font-size: medium;">DSU-CSE Student Resources Portal</a>
             <button
                 class="navbar-toggler"
                 data-toggle="collapse"
                 data-target="#collapseNav"
             >
-            <span class="fas text-dark fa-bars"></span>
+                <span class="fas text-dark fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse flex-grow-0" id="collapseNav">
                 <div class="navbar-nav">
@@ -70,26 +71,25 @@
         </div>
     </nav>
 
-    <!-- Announcements display Section-->
-    <div class="container my-5 py-5">
-        <div class="row my-3 pt-3">
+
+    <!-- Notes display section -->
+    <div class="container my-5 text-center py-5 cont1">
+        <div class="row my-5 pt-3">
             <div class="col-12 col-md-8">
-                <h1 class="font-weight-light text-danger">
-                    Announcements
+                <h1 class="font-weight-light text-info">
+                    Notes
                 </h1>
-                <div class="lead">
-                     We do our best to ensure all announcements are legitimate and verified. However, don't treat them as official.
-                </div>
+                <div class="lead">Course material and notes sourced from Professors and batchmates</div>
             </div>
             <div class="col-12 col-md-4">
-                <a href="/makeannouncement.html">
-                    <button class="btn btn-outline-dark align-items-center mt-5">
-                        Publish new announcement
+                <a href="/uploadnotes.html">
+                    <button class="btn btn-outline-dark align-items-center mt-4">
+                        Upload new notes
                     </button>
                 </a>
             </div>
         </div>
-        <div class="row my-5 pt-3 overflow-hidden" id="rowdisplay">
+        <div class="row my-5 pt-3" id="notesblock">
             
         </div>
     </div>
@@ -112,8 +112,7 @@
                 </div>
                 <div class="col-12 col-md-4 text-light text-justify">
                     <p>
-                        This website was developed by Akash Bagchi and Akshaya Nadathur of Dayananda Sagar University - Kudlu Gate, Bangalore as part of the 4th Semester Web Technologies' Mini Project. The main goal of the website was to create a student portal for CSE students wherein there would be easy access to college material, calendars, announcements etc. thereby removing ambiguity and streamlining the lives of thousands of students. This website uses HTML, CSS, JavaScript and JQuery, Bootstrap4, PHP and MySQL to achieve its functionality. We hope the site served your needs!
-                    </p>
+                        This website was developed by Akash Bagchi and Akshaya Nadathur of Dayananda Sagar University - Kudlu Gate, Bangalore as part of the 4th Semester Web Technologies' Mini Project. The main goal of the website was to create a student portal for CSE students wherein there would be easy access to college material, calendars, announcements etc. thereby removing ambiguity and streamlining the lives of thousands of students. This website uses HTML, CSS, JavaScript and JQuery, Bootstrap4, PHP and MySQL to achieve its functionality. We hope the site served your needs!                    </p>
                 </div>
                 <div class="col-12 col-md-4 pb-4">
                      <h5 class="text-info">Social</h5>
@@ -135,6 +134,5 @@
             </div>
         </div>
     </footer>
-    
 </body>
 </html>

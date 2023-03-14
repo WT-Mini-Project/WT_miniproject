@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publish new announcement</title>
+    <title>Announcements</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -19,12 +19,28 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script type="text/javascript">
+       
+       $(document).ready(function()
+        {
+            setInterval(function()
+            {
+                $("#rowdisplay").load("fetchann.php");
+                refresh();
+            },1000)
+        })
+
+        
+    </script>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-sm fixed-top" style="background-color:lavender;">
         <div class="container my-2">
-            <a href="../index.html" class="navbar-brand text-dark font-weight-bold" style="font-size: medium;">DSU-CSE Student Resources Portal</a>
+            <a href="/index.html" class="navbar-brand text-dark font-weight-bold" style="font-size: medium;">DSU-CSE Student Resources Portal</a>
             <button
                 class="navbar-toggler"
                 data-toggle="collapse"
@@ -46,7 +62,7 @@
                     <a href="/announcementspage.html" class="nav-item nav-link text-dark font-weight-bold my-auto">
                         Announcements
                     </a>
-                    <a href="#" class="nav-item nav-link text-dark font-weight-bold my-auto">
+                    <a href="/eventspage.html" class="nav-item nav-link text-dark font-weight-bold my-auto">
                         Events
                     </a>
                 </div>
@@ -54,38 +70,27 @@
         </div>
     </nav>
 
-    <div class="container mt-5 pt-5">
-        <h1 class="font-weight-light text-danger">
-            Publishing New Announcement
-        </h1>
-    </div>
-
-    <!-- Form -->
-    <div class="container my-5 pt-0">
-        <div class="row">
+    <!-- Announcements display Section-->
+    <div class="container my-5 py-5">
+        <div class="row my-3 pt-3">
             <div class="col-12 col-md-8">
-                <form action="../php/sendannouncement.php" method="POST">
-                    <div class="form-group">
-                        <label for="title">Title: </label>
-                        <input type="text" class="form-control" id="title" name="title" required placeholder="Announcement title">
-                    </div>
-                    <div class="form-group">
-                        <label for="text">Description: </label>
-                        <input type="textarea" class="form-control" id="text" name="text" required placeholder="Elaborate on the announcement"> 
-                    </div>
-                    <div class="form-group">
-                        <label for="href">Sources: </label>
-                        <input type="text" class="form-control" id="sources" name="sources" required placeholder="Seperate multiple sources with commas">
-                    </div>
-                    <div class="form-group">
-                        <label for="pw">Password: </label>
-                        <input type="password" class="form-control" id="pw" name="pw" required placeholder="Password">
-                    </div>
-                    <button type="submit" name="submit" class="btn btn-outline-dark btn-success">
-                        Submit
-                    </button>
-                </form>
+                <h1 class="font-weight-light text-danger">
+                    Announcements
+                </h1>
+                <div class="lead">
+                     We do our best to ensure all announcements are legitimate and verified. However, don't treat them as official.
+                </div>
             </div>
+            <div class="col-12 col-md-4">
+                <a href="/makeannouncement.html">
+                    <button class="btn btn-outline-dark align-items-center mt-5">
+                        Publish new announcement
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="row my-5 pt-3 overflow-hidden" id="rowdisplay">
+            
         </div>
     </div>
 
@@ -107,7 +112,8 @@
                 </div>
                 <div class="col-12 col-md-4 text-light text-justify">
                     <p>
-                        This website was developed by Akash Bagchi and Akshaya Nadathur of Dayananda Sagar University - Kudlu Gate, Bangalore as part of the 4th Semester Web Technologies' Mini Project. The main goal of the website was to create a student portal for CSE students wherein there would be easy access to college material, calendars, announcements etc. thereby removing ambiguity and streamlining the lives of thousands of students. This website uses HTML, CSS, JavaScript and JQuery, Bootstrap4, PHP and MySQL to achieve its functionality. We hope the site served your needs!                    </p>
+                        This website was developed by Akash Bagchi and Akshaya Nadathur of Dayananda Sagar University - Kudlu Gate, Bangalore as part of the 4th Semester Web Technologies' Mini Project. The main goal of the website was to create a student portal for CSE students wherein there would be easy access to college material, calendars, announcements etc. thereby removing ambiguity and streamlining the lives of thousands of students. This website uses HTML, CSS, JavaScript and JQuery, Bootstrap4, PHP and MySQL to achieve its functionality. We hope the site served your needs!
+                    </p>
                 </div>
                 <div class="col-12 col-md-4 pb-4">
                      <h5 class="text-info">Social</h5>
@@ -129,5 +135,6 @@
             </div>
         </div>
     </footer>
+    
 </body>
 </html>

@@ -1,7 +1,7 @@
 <?php
     function filldiv(){
         $loopResult = "";
-        $conn = new mysqli("localhost", "root", "", "reviews");
+        $conn = new mysqli("localhost", "id20114417_akashbagchi", "xDSS6mpV+IhGSM", "id20114417_studentportal");
         $sql = "SELECT * FROM reviewdetails ORDER BY ind DESC";
         $result = $conn->query($sql);
         while($row = $result->fetch_assoc()){

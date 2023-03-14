@@ -1,8 +1,8 @@
 <?php
     $server = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "newnotes";
+    $username = "id20114417_akashbagchi";
+    $password = "xDSS6mpV+IhGSM";
+    $dbname = "id20114417_studentportal";
     $pw = $_POST['pw'];
 
     if($pw != "admpass123"){
